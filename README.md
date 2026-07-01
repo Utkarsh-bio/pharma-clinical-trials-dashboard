@@ -1,31 +1,36 @@
 # Pharma Clinical Trials Dashboard
 
-An interactive Excel dashboard analyzing global clinical trials data (2010) across 22 pharmaceutical companies.
+An Excel dashboard analyzing global pharma clinical trials data (2010-2026) across 22 pharmaceutical companies.
 
 ## Dataset
 Source: [Global Healthcare & Pharma 2010-2026 (Kaggle)](https://www.kaggle.com/datasets/sergionefedov/global-healthcare-and-pharma-2010-2026)
+- 599 clinical trials
+- 22 pharma sponsors
+- 10 therapy areas
 
 ## Skills Used
 - Pivot Tables & Pivot Charts
 - VLOOKUP, INDEX/MATCH, XLOOKUP
-- Statistical functions (AVERAGE, COUNTIF, SUMPRODUCT)
-- Conditional Formatting
-- KPI calculations
+- Nested IF / AND-OR Logic
+- Data Validation (Interactive Dropdown)
+- Conditional Formatting (Color-coded KPIs)
+- Statistical functions (AVERAGE, COUNTIF, SUMPRODUCT, FORECAST)
 
 ## Key Insights
-- Total trials analyzed: 599
-- Overall success rate: 52%
-- Cardiovascular trials had the highest success rate (~80%)
-- Neurology trials had the lowest success rate (~27%)
-- Pfizer led with the highest trial count (40 trials)
+- Overall trial success rate: 52%
+- Cardiovascular trials: highest success rate (~80%)
+- Neurology trials: lowest success rate (~27%)
+- Pfizer: highest trial count (40 trials)
+- Phase 3 trials (326) outnumber Phase 2 (273)
 
 ## Dashboard Features
-- Sponsor-wise trial count visualization
-- Trial phase distribution
-- Success rate by therapy area
-- Interactive sponsor search using XLOOKUP
+- Sponsor-wise trial count (Bar Chart)
+- Trial phase distribution (Pie Chart)
+- Success rate by therapy area (Bar Chart)
+- KPIs: Total Trials, Success Rate, Total Sponsors
+- Interactive sponsor search with dropdown + XLOOKUP
+- Risk Level classification (High/Medium/Low) using Nested IF
 
 ## Files
-- `Book (1).xlsx` — Full dashboard with raw data and pivot tables
-- `Screenshot` — Dashboard preview# pharma-clinical-trials-dashboard
-excel dashboard analyzing clinical trials data using pivot tables, charts,Xlookup
+- `Book (1).xlsx` — Full dashboard with raw data, pivot tables, and Dashboard sheet
+- `Screenshot` — Dashboard preview
