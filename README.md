@@ -34,3 +34,12 @@ Source: [Global Healthcare & Pharma 2010-2026 (Kaggle)](https://www.kaggle.com/d
 ## Files
 - `Book (1).xlsx` — Full dashboard with raw data, pivot tables, and Dashboard sheet
 - `Screenshot` — Dashboard preview
+## SQL Analysis (New Addition)
+
+To demonstrate progressive depth on the same dataset, I replicated this project's core analysis in MySQL:
+
+- Designed and created a normalized `trials` table schema (13 columns) matching the Excel dataset
+- Cleaned and imported 599 records from the source CSV, resolving date-format compatibility issues during import
+- Wrote queries covering filtering (WHERE), aggregation (GROUP BY, ORDER BY), conditional logic (CASE), subqueries, and window functions (RANK)
+
+Files: [`sql-analysis/schema.sql`](sql-analysis/schema.sql) | [`sql-analysis/queries.sql`](sql-analysis/queries.sql)
