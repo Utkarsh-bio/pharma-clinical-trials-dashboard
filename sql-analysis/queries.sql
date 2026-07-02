@@ -36,3 +36,27 @@ SELECT sponsor, enrollment_n,
     RANK() OVER (ORDER BY enrollment_n DESC) AS enrollment_rank
 FROM trials
 LIMIT 10;
+-- JOIN example
+CREATE TABLE sponsor_info (
+    sponsor VARCHAR(100) PRIMARY KEY,
+    sponsor_type VARCHAR(50)
+);
+
+INSERT INTO sponsor_info (sponsor, sponsor_type) VALUES
+('Pfizer','Industry'),
+('GSK','Industry'),
+('Novartis','Industry'),
+('BioNTech','Industry'),
+('Moderna','Industry');
+
+SELECT t.trial_id, t.sponsor, t.phase, s.sponsor_type
+FROM trials t
+INNER JOIN sponsor_info s ON t.sponsor = s.sponsor
+LIMIT 10;
+
+-- HAVING example
+SELECT therapy_area, COUNT(*) AS total
+FROM trials
+GROUP BY therapy_area
+HAVING COUNT(*) > 50;
+
